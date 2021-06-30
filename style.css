@@ -4,6 +4,9 @@ body,html{
     width: 100%;
     overflow-x: hidden;
     background: linear-gradient(to top,rgb(136, 134, 134), rgb(54, 53, 53));
+    background: linear-gradient(183deg, #202020, #3a3a3a, #535353, #727272);
+    background-size: 200% 200%;
+    animation: backmove2 3s ease;
 }
 
 .logo{
@@ -206,8 +209,9 @@ nav ul li a:hover{
     position: absolute;
     right: 0;
     left: 0;
+    top: 0;
     margin: auto;
-    bottom: 39px;
+    bottom: 0;
     width: 132px;
     height: 132px;
     animation: apear 1s;
@@ -218,8 +222,9 @@ nav ul li a:hover{
     position: absolute;
     right: 0;
     left: 0;
+    top:0;
     margin: auto;
-    bottom: 67px;
+    bottom: 0;
     width: 90%;
     height: fit-content;
     color: white;
@@ -361,11 +366,14 @@ nav ul li a:hover{
     position: relative;
     overflow: hidden;
 }
-
 @keyframes backmove {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+@keyframes backmove2 {
+    0%{background-position:0% 79%}
+    100%{background-position:100% 22%}
 }
 
 @keyframes prog {
