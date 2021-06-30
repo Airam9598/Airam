@@ -2,7 +2,7 @@ body,html{
     margin:0;
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow-x: hidden;
     background: linear-gradient(to top,rgb(136, 134, 134), rgb(54, 53, 53));
 }
 
@@ -27,21 +27,21 @@ body,html{
     margin: auto;
     margin-top: 17vh;
     font-size: 2em;
-    padding: 20px 40px 20px 40px;
     border-radius: 20px;
     border: 4px inset #cdcaf3;
     background: linear-gradient(to bottom,rgb(74 72 72), rgb(26 26 26));
     transition: 0.5s, transform 1.5s, box-shadow 1.4s;
     text-align: center;
     width: fit-content;
+    animation: opaciti 1s,apear-bottom 2s 1s;
 }
 .logo div a{
-    width: 100%;
-    height: 100%;
     text-align: center;
     color: #dbdbdb;
     transition: 0.5s;
     text-decoration: none;
+    padding: 20px 40px 20px 40px;
+    display: flex;
 }
 .logo div:hover{
     border: 4px inset #4b43dd;
@@ -73,7 +73,6 @@ nav ul{
     transition: 1s;
 }
 nav ul li{
-    display: inline;
     display: flex;
     align-items: center;
     height: 100%;
@@ -96,6 +95,30 @@ nav ul li a:hover{
     background: linear-gradient(to top,rgb(124, 123, 123), rgb(153, 152, 152));
 }
 
+@keyframes opaciti {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 0;
+    }
+    
+}
+
+@keyframes scale {
+    from{
+        transform:translateX(50%);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0%);
+        opacity: 1;
+    }
+    
+}
+
 @keyframes apear {
     from{
         opacity: 0;
@@ -105,6 +128,19 @@ nav ul li a:hover{
     to{
         opacity: 1;
         transform:scale(1);
+    }
+    
+}
+
+@keyframes apear-bottom {
+    from{
+        opacity: 0;
+        transform:translateY(50%);
+    }
+
+    to{
+        opacity: 1;
+        transform:translateY(0%);
     }
     
 }
@@ -128,6 +164,7 @@ nav ul li a:hover{
     padding: 10px;
     color: white;
     margin-top: 7vh;
+    animation:apear 1s;
 }
 .box{
     width: 100%;
@@ -137,30 +174,35 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
     margin-top: 16vh;
+    flex-wrap: wrap;
 }
+
 
 .box .item{
     height: 270px;
     width: 270px;
     position: relative;
-    background: radial-gradient( rgb(112, 20, 148), rgb(15, 15, 15));
     border-radius: 10px;
     border: 4px inset #cdcaf3;
     transition: 0.5s, transform 1.5s, box-shadow 1.4s;
-    animation:apear 1s;
+    animation:opaciti 1s,apear 1s 1s;
+    margin:10px;
 }
 
-.box .item .title{
+.box .item .titlebox{
     position: absolute;
     right: 0;
     left: 0;
+    padding: 10px;
+    border-style: groove;
+    color:white;
     margin: auto;
     top: 10px;
     font-size: 2em;
     width: fit-content;
 }
 
-.box .item img{
+.box .item #logo{
     position: absolute;
     right: 0;
     left: 0;
@@ -168,6 +210,8 @@ nav ul li a:hover{
     bottom: 39px;
     width: 132px;
     height: 132px;
+    animation: apear 2s;
+    opacity: 1;
 }
 
 .box .item .info{
@@ -178,9 +222,30 @@ nav ul li a:hover{
     bottom: 67px;
     width: 90%;
     height: fit-content;
-    display: none;
     color: white;
     font-size: 1.4em;
+    animation: disapear 2s;
+    opacity: 0;
+    z-index: 9;
+}
+
+.box .item a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.box .item #made{
+    position: absolute;
+    bottom: 0px;
+    width: 40px;
+    height: 40px;
+    animation: disapear 2s;
+    display: block;
+    opacity: 0;
 }
 
 .box .item:hover{
@@ -191,13 +256,129 @@ nav ul li a:hover{
     box-shadow: black 0px 13px 8px;
 }
 
-.box .item:hover img{
+.box .item:hover #logo{
     animation: disapear 2s;
     opacity: 0;
 }
 
+
 .box .item:hover .info{
-    display: block;
     animation-delay: 1s;
     animation: apear 2s;
+    opacity: 1;
+}
+
+.box .item:hover #made{
+    display: block;
+    opacity: 1;
+    animation-delay: 1s;
+    animation: apear 2s;
+}
+
+.box .item #imagen{
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+}
+.box .item .madeby{
+    position: absolute;
+    right: 15px;
+    top: -67px;
+    width: 195px;
+    height: fit-content;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 20px;
+    background: black;
+    padding: 10px;
+    animation: disapear 2s;
+    opacity: 0;
+    display: none;
+    z-index: 8;
+}
+
+.box .item #imagen:hover .madeby{
+    display: block;
+    animation-delay: 1s;
+    animation: apear 1s;
+    opacity: 1;
+    z-index: 13;
+}
+
+.box .item #imagen:hover{
+    z-index: 13;
+}
+
+
+.learn{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.learn p{
+    color:white;
+    transition: 0.5s, transform 1.5s, box-shadow 1.4s;
+    animation:opaciti 1s,apear 1s 1s;
+    margin:10px;
+    font-size: 2em;
+}
+
+.know{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+}
+.barra { 
+    height: 25px;
+    position: relative;
+    background: #cacaca;
+    border-radius: 10px;
+    padding: 5px;
+    width: 500px;
+    margin-right: 30px;
+    margin-left: auto;
+    animation: opaciti 1s ,apear 1s 1s;
+}
+.barra > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #6188f8;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes prog {
+  0% {width: 0%}
+  100% {width: 70%}
+}
+
+@keyframes prog2 {
+    0% {width: 0%}
+    100% {width: 80%}
+}
+
+@keyframes prog3 {
+    0% {width: 0%}
+    100% {width: 50%}
+}
+@keyframes prog4 {
+    0% {width: 0%}
+    100% {width: 40%}
+}
+@keyframes prog5 {
+    0% {width: 0%}
+    100% {width: 20%}
 }
