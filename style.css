@@ -210,7 +210,7 @@ nav ul li a:hover{
     bottom: 39px;
     width: 132px;
     height: 132px;
-    animation: apear 2s;
+    animation: apear 1s;
     opacity: 1;
 }
 
@@ -224,7 +224,7 @@ nav ul li a:hover{
     height: fit-content;
     color: white;
     font-size: 1.4em;
-    animation: disapear 2s;
+    animation: disapear 1s;
     opacity: 0;
     z-index: 9;
 }
@@ -257,14 +257,14 @@ nav ul li a:hover{
 }
 
 .box .item:hover #logo{
-    animation: disapear 2s;
+    animation: disapear 1.5s;
     opacity: 0;
 }
 
 
 .box .item:hover .info{
     animation-delay: 1s;
-    animation: apear 2s;
+    animation: apear 1.5s;
     opacity: 1;
 }
 
@@ -356,10 +356,18 @@ nav ul li a:hover{
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: #6188f8;
+    background: linear-gradient(92deg, #0e73f1, #237deb, #418ff0, #65a5f3);
+    background-size: 800% 800%;
     position: relative;
     overflow: hidden;
 }
+
+@keyframes backmove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 @keyframes prog {
   0% {width: 0%}
   100% {width: 70%}
