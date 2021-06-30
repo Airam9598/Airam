@@ -179,8 +179,8 @@ nav ul li a:hover{
 
 
 .box .item{
-    height: 270px;
-    width: 270px;
+    height: 30px;
+    width: 300px;
     position: relative;
     border-radius: 10px;
     border: 4px inset #cdcaf3;
