@@ -357,7 +357,7 @@ nav ul li a:hover{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background: linear-gradient(92deg, #0e73f1, #237deb, #418ff0, #65a5f3);
-    background-size: 800% 800%;
+    background-size: 200% 200%;
     position: relative;
     overflow: hidden;
 }
