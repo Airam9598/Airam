@@ -98,6 +98,10 @@ nav ul li a:hover{
     background: linear-gradient(to top,rgb(124, 123, 123), rgb(153, 152, 152));
 }
 
+.selected{
+        text-decoration: overline;
+}
+
 @keyframes opaciti {
     from{
         opacity: 0;
