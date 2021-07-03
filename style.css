@@ -6,7 +6,7 @@ body,html{
     background: linear-gradient(to top,rgb(136, 134, 134), rgb(54, 53, 53));
     background: linear-gradient(183deg, #202020, #3a3a3a, #535353, #727272);
     background-size: 200% 200%;
-    animation: backmove2 3s ease;
+    animation: backmove2 3s ease,backmove3 10s 3s ease infinite;
 }
 
 .logo{
@@ -152,18 +152,6 @@ nav ul li a:hover{
     
 }
 
-@keyframes disapear {
-    from{
-        opacity: 1;
-        transform:scale(1);
-    }
-
-    to{
-        opacity: 0;
-        transform:scale(0);
-    }
-    
-}
 .title{
     text-align: center;
     font-size: 2em;
@@ -219,7 +207,9 @@ nav ul li a:hover{
     width: 132px;
     height: 132px;
     animation: apear 1s;
+    transform:scale(1);
     opacity: 1;
+    transition:1s;
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
 }
@@ -235,8 +225,9 @@ nav ul li a:hover{
     height: fit-content;
     color: white;
     font-size: 1.4em;
-    animation: disapear 1s;
     opacity: 0;
+    transform:scale(0);
+    transition:1s;
     z-index: 9;
 }
 
@@ -254,9 +245,10 @@ nav ul li a:hover{
     bottom: 0px;
     width: 40px;
     height: 40px;
-    animation: disapear 2s;
     display: block;
     opacity: 0;
+    transition:1s;
+    transform:scale(0);
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
 }
@@ -270,22 +262,23 @@ nav ul li a:hover{
 }
 
 .box .item:hover #logo{
-    animation: disapear 1.5s;
     opacity: 0;
+    transition:1s;
+    transform:scale(0);
 }
 
 
 .box .item:hover .info{
-    animation-delay: 1s;
-    animation: apear 1.5s;
+    transform:scale(1);
+    transition:1s;
     opacity: 1;
 }
 
 .box .item:hover #made{
     display: block;
     opacity: 1;
-    animation-delay: 1s;
-    animation: apear 2s;
+    transition:1s;
+    transform:scale(1);
 }
 
 .box .item #imagen{
@@ -307,16 +300,15 @@ nav ul li a:hover{
     border-radius: 20px;
     background: black;
     padding: 10px;
-    animation: disapear 2s;
     opacity: 0;
-    display: none;
     z-index: 8;
+    transition:1s;
+    transform:scale(0);
 }
 
 .box .item #imagen:hover .madeby{
-    display: block;
-    animation-delay: 1s;
-    animation: apear 1s;
+    transition:1s;
+    transform:scale(1);
     opacity: 1;
     z-index: 13;
 }
@@ -415,13 +407,21 @@ nav ul li a:hover{
     position: relative;
     overflow: hidden;
 }
+
 @keyframes backmove {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
 @keyframes backmove2 {
     0%{background-position:0% 79%}
+    100%{background-position:100% 22%}
+}
+
+@keyframes backmove3 {
+    0%{background-position:100% 22%}
+    50%{background-position:0% 25%}
     100%{background-position:100% 22%}
 }
 
