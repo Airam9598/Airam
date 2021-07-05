@@ -14,6 +14,17 @@ body,html{
     height: 90%;
     text-align: center;
 }
+.principal_image{
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    animation: apear 1s;
+    bottom: 34px;
+    border-radius: 100%;
+    border: white 10px inset;
+}
 
 .logo p{
     font-size: 2.4em;
@@ -21,14 +32,14 @@ body,html{
     color: #f5f3f3;
     margin: auto;
     width: fit-content;
-    padding-top: 17vh;
-    margin-bottom: 15vh;
+    padding-top: 5vh;
+    margin-bottom: 10vh;
     animation: apear 2s;
 }
 
 .logo div{
     margin: auto;
-    margin-top: 17vh;
+    margin-top: 0vh;
     font-size: 1.6em;
     border-radius: 20px;
     border: 4px inset #cdcaf3;
@@ -212,6 +223,8 @@ nav ul li a:hover{
     transition:1s;
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
+    border-radius: 100%;
+    border: white 10px inset;
 }
 
 .box .item .info{
@@ -332,9 +345,10 @@ nav ul li a:hover{
 .learn .myimage{
     height: 265px;
     margin-top: 8vh;
-    transition:1s;
+    transition: 1s;
     border-radius: 20px;
-    box-shadow: white 0 0 15px 0px;
+    box-shadow: black 0 0 15px 0px;
+    border: white 6px inset;
     animation: apear 1.5s;
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
