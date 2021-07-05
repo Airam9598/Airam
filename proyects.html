@@ -44,7 +44,7 @@
         </div>
 
         <div class="item" style="background: radial-gradient( 45% 45%,rgb(56, 155, 236), rgb(15, 15, 15));">
-            <a ></a>
+            <a onclick="open_images();"></a>
             <div class="titlebox">Vida Canaria</div>
             <img id="logo" src="images/Vida_Canaria.png">
             <div class="info">Web sobre la gastronomía, fauna, flora, ubicaciones, etc. De canarias.</div>
@@ -73,5 +73,42 @@
             <div class="info">Otros Proyectos realizados, algunos de ellos abandonados. Y otros a la espera de mejoras</div>
         </div>
     </div>
+    <div id="back_images">
+        <div class="informacion">Lamentablemente este proyecto no está público ya que se encuentra en construcción, 
+            pero aquí les dejo unas imágenes de la web por el momento</div>
+        <div id="images">
+            <span class="close" onclick="close_images();">X</span>
+            <span onclick="change_image('left')" class="arrow left_arrow"></span>
+            <span onclick="change_image('right')" class="arrow right_arrow"></span>
+            <img id="image_proyect" src="images/vidacanaria1.png">
+        </div>
+    </div>
+    <script>
+        var image=1;
+        function open_images(){
+            document.getElementById("back_images").style.display="block";
+        }
+        function close_images(){
+            document.getElementById("back_images").style.display="none";
+        }
+
+        function change_image(side){
+            if(side=="left"){
+                image=image-1;
+                if(image<=0){
+                    image=1;
+                }else{
+                    document.getElementById("image_proyect").src="images/vidacanaria"+image+".png"
+                }
+            }else if(side=="right"){
+                image=image+1;
+                if(image>=12){
+                    image=11;
+                }else{
+                    document.getElementById("image_proyect").src="images/vidacanaria"+image+".png"
+                }
+            }
+        }
+    </script>
 </body>
 </html>

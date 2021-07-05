@@ -329,6 +329,115 @@ nav ul li a:hover{
 .box .item #imagen:hover{
     z-index: 13;
 }
+#images{
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    TOP: 160px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgb(74 72 72);
+    border-radius: 20px;
+    border: white 10px outset;
+}
+
+#images img{
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    TOP: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 20px;
+    border: white 5px inset;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+#back_images{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    TOP: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    z-index: 100;
+    background: #7b7b7b;
+}
+
+#back_images .informacion{
+    position: absolute;
+    width: 80%;
+    height: fit-content;
+    font-size: 4vh;
+    TOP: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgb(78, 78, 78);
+    border-radius: 20px;
+    color: #ececec;
+    border: white 10px inset;
+    padding: 10px;
+}
+#images .close{
+    position: absolute;
+    top: -29px;
+    right: -30px;
+    padding: 5px 11px 5px 11px;
+    color: white;
+    background: #f80909;
+    border-radius: 100%;
+    border: white 5px inset;
+    font-size: 1.7em;
+    transition:0.5s;
+}
+
+#images .arrow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(images/arrow.png);
+    background-size: cover;
+    color: white;
+    height: 100px;
+    width: 100px;
+    transition: 0.5s;
+}
+#images .left_arrow{
+    left: 0;
+    transform: rotate(180deg);
+}
+
+#images .right_arrow{
+    right: 0;
+}
+
+#images .arrow:hover{
+    cursor:pointer;
+}
+
+#images .left_arrow:hover{
+    transform: rotate(180deg) translateX(10px);
+}
+
+#images .right_arrow:hover{
+    transform:translateX(10px);
+}
+
+
+#images .close:hover{
+    cursor:pointer;
+    border: red 5px inset;
+    transition:0.5s;
+}
 
 
 .learn{
