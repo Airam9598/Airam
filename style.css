@@ -89,6 +89,12 @@ nav,header{
     align-items: center;
     font-size: 1.1em;
 }
+nav #image_menu img{
+    height: 85%;
+}
+nav #image_menu{
+    display: none;
+}
 nav ul{
     margin-right: 10px;
     margin-left: auto;
@@ -588,3 +594,69 @@ nav ul li a:hover{
     0% {width: 0%}
     100% {width: 90%}
 }
+
+
+
+@media only screen and (max-width: 990px) {
+    .learn .personal_info{
+        margin-left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .logo{
+        height: fit-content;
+    }
+    nav #image_menu{
+        display: block;
+    }
+    nav #menu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        right: 0;
+        height: 92vh;
+        bottom: 0px;
+        background: black;
+        margin: 0 auto;
+        font-size: 5vh;
+        z-index: 20;
+        align-items: center;
+        justify-content: end;
+        flex-wrap: wrap;
+        animation: scale 0.5s;
+    }
+
+
+    nav #menu li{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    nav ul li a:hover{
+        text-decoration: underline;
+        transition: all 0.5s;
+        background: transparent;
+    }
+
+    .selected{
+        text-decoration: underline;
+    }
+
+    @keyframes scale {
+        from{
+            transform: scaleY(0);
+        }
+        to{
+            transform: scaleY(1);
+        }
+        
+    }
+
+  }

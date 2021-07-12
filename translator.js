@@ -1,5 +1,12 @@
+    document.getElementById("image_menu").onclick=function(){
+        var menu=document.getElementById("menu");
+        if(menu.style.display=="flex"){
+            menu.style.display="none";
+        }else{
+            menu.style.display="flex"
+        }
 
-
+    }
     function traductor(){
         if(document.documentElement.lang=="en"){
             if (!localStorage.getItem('traductor', 'en')){
