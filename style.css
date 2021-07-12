@@ -503,6 +503,7 @@ nav ul li a:hover{
     margin-bottom: 4vh;
     animation: apear 1s;
     width: 100%;
+    word-break: break-word;
 }
 
 .learn #learn_title a{
