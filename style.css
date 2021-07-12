@@ -20,10 +20,21 @@ body,html{
     margin-right: auto;
     display: block;
     margin-top: 50px;
-    animation: apear 1s;
+    animation: apear 1s, rotate 7s 1s infinite;
     bottom: 34px;
     border-radius: 100%;
     border: white 10px inset;
+}
+
+@keyframes rotate {
+    from{
+        transform:rotate3d(0,1,0,0deg)
+    }
+
+    to{
+        transform:rotate3d(0,1,0,360deg)
+    }
+    
 }
 
 .logo p{
