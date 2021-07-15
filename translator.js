@@ -1,3 +1,4 @@
+    
     document.getElementById("image_menu").onclick=function(){
         var menu=document.getElementById("menu");
         if(menu.style.display=="flex"){
