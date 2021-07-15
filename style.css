@@ -618,7 +618,7 @@ nav ul li a:hover{
     }
     nav #menu{
         display: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         text-align: center;
         right: 0;
