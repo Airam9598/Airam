@@ -610,6 +610,9 @@ nav ul li a:hover{
     .logo{
         height: max-content;
     }
+    .logo{
+        width: auto;
+    }
     nav #image_menu{
         display: block;
     }
@@ -660,7 +663,7 @@ nav ul li a:hover{
     #images img{
         width: 95%;
         height: 45%;
-        top: 33px;
+        bottom: 30px;
         left: 0;
         right: 0;
         bottom: inherit;
