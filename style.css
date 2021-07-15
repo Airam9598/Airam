@@ -650,6 +650,29 @@ nav ul li a:hover{
         text-decoration: underline;
     }
 
+    #back_images .informacion{
+        font-size: 1.2em;
+    }
+
+    #images{
+        height: 50%;
+    }
+    #images img{
+        width: 95%;
+        height: 45%;
+        top: 33px;
+        left: 0;
+        right: 0;
+        bottom: inherit;
+        margin: auto;
+        image-rendering: pixelated;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    #images .arrow{
+        top: auto;
+    }
+
     @keyframes scale {
         from{
             transform: scaleY(0);
