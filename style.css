@@ -72,8 +72,8 @@ body,html{
     border: 4px inset #4b43dd;
     transition:  0.7s;
     cursor: pointer;
-    transform: translateY(-10px);
-    box-shadow: black 0px 13px 8px;
+    transform: translateY(-9px);
+    box-shadow: black 0px 7px 5px;
 }
 
 .logo div:hover a{
@@ -476,17 +476,33 @@ nav ul li a:hover{
     width: 100%;
     margin-top: 30px;
 }
-.learn .learn_social a{
-    margin-left: 10px;
-    margin-right: 10px;
-}
 
 .learn .learn_social div{
     height: 90px;
     width: 90px;
+    position: relative;
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
+    animation: apear 2s;
+}
+
+.learn .learn_social div p{
+    display: none;
+    position: absolute;
+    background: black;
+    color: white;
+    opacity: 0; 
+    width: 100%;
+    margin: 0;
+    top: 100px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 10px;
+}
+
+.learn .learn_social div:hover p{
+    display: block;
+    opacity: 1;
 }
 
 .learn .learn_social img{
