@@ -42,7 +42,7 @@ body,html{
     font-weight: bold;
     color: #f5f3f3;
     margin: auto;
-    width: fit-content;
+    width: max-content;
     padding-top: 5vh;
     margin-bottom: 10vh;
     animation: apear 2s;
@@ -57,7 +57,7 @@ body,html{
     background: linear-gradient(to bottom,rgb(74 72 72), rgb(26 26 26));
     transition: 0.5s, transform 1.5s, box-shadow 1.4s;
     text-align: center;
-    width: fit-content;
+    width: max-content;
     animation: opaciti 1s,apear-bottom 2s 1s;
 }
 .logo div a{
@@ -191,7 +191,7 @@ nav ul li a:hover{
 }
 .box{
     width: 100%;
-    height:fit-content;
+    height:max-content;
     text-align: center;
     display: flex;
     align-items: center;
@@ -222,7 +222,7 @@ nav ul li a:hover{
     margin: auto;
     top: 10px;
     font-size: 1.7em;
-    width: fit-content;
+    width: max-content;
 }
 
 .box .item #logo{
@@ -252,7 +252,7 @@ nav ul li a:hover{
     margin: auto;
     bottom: 0;
     width: 90%;
-    height: fit-content;
+    height: max-content;
     color: white;
     font-size: 1.4em;
     opacity: 0;
@@ -324,7 +324,7 @@ nav ul li a:hover{
     right: 15px;
     top: -67px;
     width: 195px;
-    height: fit-content;
+    height: max-content;
     color: white;
     font-size: 1.1em;
     border-radius: 20px;
@@ -391,7 +391,7 @@ nav ul li a:hover{
 #back_images .informacion{
     position: absolute;
     width: 80%;
-    height: fit-content;
+    height: max-content;
     font-size: 4vh;
     TOP: 20px;
     left: 0;
@@ -459,7 +459,7 @@ nav ul li a:hover{
 
 .learn{
     width: 100%;
-    height: fit-content;
+    height: max-content;
     text-align: center;
     display: flex;
     align-items: center;
@@ -608,7 +608,7 @@ nav ul li a:hover{
 
 @media only screen and (max-width: 600px) {
     .logo{
-        height: fit-content;
+        height: max-content;
     }
     nav #image_menu{
         display: block;
@@ -633,7 +633,7 @@ nav ul li a:hover{
 
 
     nav #menu li{
-        height: fit-content;
+        height: max-content;
         width: 100%;
         display: flex;
         justify-content: center;
