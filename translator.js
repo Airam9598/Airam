@@ -19,6 +19,12 @@
                 localStorage.removeItem('traductor', 'en');
             }
         }
+        if(document.getElementById(":1.container") != null){
+            if(document.getElementById(":1.container").style.display != "none"){
+                document.getElementById(":1.container").style.display="none";
+                document.getElementsByTagName("body")[0].style.top="0"
+            }
+        }
     }
     setInterval('traductor()',1000);
 
@@ -26,8 +32,8 @@
         
         if (localStorage.getItem('traductor', 'en')){
             new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages:'en', gaTrack: true
+                pageLanguage: 'es2',
+                includedLanguages:'en,es', gaTrack: true
             }, 'google_translate_element');
             setTimeout(function(){
                 var select = document.querySelector('select.goog-te-combo');
@@ -35,6 +41,8 @@
                 select.dispatchEvent(new Event('change'));         
             },1000)
         }else{
-            new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+            new google.translate.TranslateElement({pageLanguage: 'es2', includedLanguages: 'en,es', gaTrack: true}, 'google_translate_element');
         }
+
+        // layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
     }
