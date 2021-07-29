@@ -1,8 +1,8 @@
 *{
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body,html{
@@ -37,11 +37,9 @@ body,html{
     from{
         transform:rotate3d(0,1,0,0deg)
     }
-
     to{
         transform:rotate3d(0,1,0,360deg)
     }
-    
 }
 
 .logo p{
@@ -82,7 +80,6 @@ body,html{
     transform: translateY(-9px);
     box-shadow: black 0px 7px 5px;
 }
-
 .logo div:hover a{
     color:white;
     transition:  0.7s;
@@ -101,8 +98,6 @@ nav #image_menu img{
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
 }
-
-
 nav #image_menu{
     display: none;
 }
@@ -136,7 +131,6 @@ nav ul li a:hover{
     transition: all 0.5s;
     background: linear-gradient(to top,rgb(124, 123, 123), rgb(153, 152, 152));
 }
-
 .selected{
         text-decoration: overline;
 }
@@ -145,11 +139,9 @@ nav ul li a:hover{
     from{
         opacity: 0;
     }
-
     to{
         opacity: 0;
-    }
-    
+    }    
 }
 
 @keyframes scale {
@@ -157,12 +149,10 @@ nav ul li a:hover{
         transform:translateX(50%);
         opacity: 0;
     }
-
     to{
         transform:translateX(0%);
         opacity: 1;
     }
-    
 }
 
 @keyframes apear {
@@ -170,12 +160,10 @@ nav ul li a:hover{
         opacity: 0;
         transform:scale(0);
     }
-
     to{
         opacity: 1;
         transform:scale(1);
     }
-    
 }
 
 @keyframes apear-bottom {
@@ -183,12 +171,10 @@ nav ul li a:hover{
         opacity: 0;
         transform:translateY(50%);
     }
-
     to{
         opacity: 1;
         transform:translateY(0%);
     }
-    
 }
 
 .title{
@@ -210,7 +196,6 @@ nav ul li a:hover{
     margin-top: 16vh;
     flex-wrap: wrap;
 }
-
 
 .box .item{
     height: 300px;
@@ -460,13 +445,11 @@ nav ul li a:hover{
     transform:translateX(10px);
 }
 
-
 #images .close:hover{
     cursor:pointer;
     border: red 5px inset;
     transition:0.5s;
 }
-
 
 .learn{
     width: 100%;
@@ -540,7 +523,6 @@ nav ul li a:hover{
     image-rendering: pixelated;
     image-rendering: -webkit-optimize-contrast;
 }
-
 
 .learn .myimage:hover {
     transition:1s;
@@ -657,8 +639,6 @@ nav ul li a:hover{
     100% {width: 90%}
 }
 
-
-
 @media only screen and (max-width: 990px) {
     .learn .personal_info{
         margin-left: 0;
@@ -694,7 +674,6 @@ nav ul li a:hover{
         flex-wrap: wrap;
         animation: scale 0.5s;
     }
-
 
     nav #menu li{
         height: max-content;
@@ -748,5 +727,4 @@ nav ul li a:hover{
         }
         
     }
-
   }

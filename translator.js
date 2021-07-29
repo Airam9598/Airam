@@ -6,8 +6,9 @@
         }else{
             menu.style.display="flex"
         }
-
     }
+
+
     function traductor(){
         if(document.documentElement.lang=="en"){
             if (!localStorage.getItem('traductor', 'en')){
