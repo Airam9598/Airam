@@ -199,7 +199,7 @@ nav ul li a:hover{
 
 .box .item{
     height: 300px;
-    width: 300px;
+    width: 250px;
     position: relative;
     border-radius: 10px;
     border: 4px inset #cdcaf3;
@@ -317,7 +317,7 @@ nav ul li a:hover{
 }
 .box .item .madeby{
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: -67px;
     width: 195px;
     height: max-content;
