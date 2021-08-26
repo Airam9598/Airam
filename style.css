@@ -4,7 +4,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-/* width */
 ::-webkit-scrollbar {
     width: 10px;
     transition:1s;
@@ -14,13 +13,11 @@
   box-shadow: inset 0 0 10px black;
   border-radius: 0px;
 }
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(to left,rgb(221, 220, 220), rgb(169, 168, 168));
     border-radius: 7px;
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to left,rgb(250, 250, 250), rgb(198, 196, 196));
   }
@@ -72,19 +69,34 @@ body,html{
     margin-bottom: 10vh;
     animation: apear 2s;
 }
+.logo div::after{
+    content: '';
+    box-shadow: white 0px 0px 1px 2px;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transition:0.5s;
+}
+
 
 .logo div{
     margin: auto;
     margin-bottom: 3vh;
     font-size: 1.6em;
     border-radius: 20px;
-    border: 4px inset #cdcaf3;
+    box-shadow: black 6px 6px 5px 0px;
     background: linear-gradient(to bottom,rgb(74 72 72), rgb(26 26 26));
     transition: 0.5s, transform 1.5s, box-shadow 1.4s;
     text-align: center;
     width: max-content;
     animation: opaciti 1s,apear-bottom 2s 1s;
+    position: relative;
 }
+
 .logo div a{
     text-align: center;
     color: #dbdbdb;
@@ -92,13 +104,18 @@ body,html{
     text-decoration: none;
     padding: 20px 40px 20px 40px;
     display: flex;
+    background: linear-gradient(to bottom,rgb(74 72 72), rgb(26 26 26));
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
 }
-.logo div:hover{
-    border: 4px inset #4b43dd;
+.logo div:hover::after {
+    transform: rotateX(0deg);
     transition:  0.7s;
-    cursor: pointer;
-    transform: translateY(-9px);
-    box-shadow: black 0px 7px 5px;
+}
+
+.logo div:hover{
+    transform: translateY(-5px);
 }
 .logo div:hover a{
     color:white;
@@ -133,7 +150,26 @@ nav ul li{
     display: flex;
     align-items: center;
     height: 100%;
+    position: relative;
 }
+
+nav ul li::after{
+    content: "";
+    box-shadow: white 0px 0px 1px 2px;
+    width: 86%;
+    height: 80%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    right: 0;
+    transition: 1s;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: rotate3d(1, 1, 1, 360deg);
+}
+
 nav ul li a{
     color:white;
     text-decoration: none;
@@ -144,12 +180,34 @@ nav ul li a{
     padding-right: 2vw;
     padding-left: 2vw;
     background: linear-gradient(to top,transparent, transparent);
+    position: relative;
+    z-index: 10;
+}
+nav ul li a::after{
+    content: "";
+    width: 63%;
+    height: 2px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 18px;
+    margin: auto;
+    right: 0;
+    transition: 1s;
+    left: 0;
+    z-index: 1;
+    transform: scaleX(0);
 }
 
-nav ul li a:hover{
-    text-decoration: overline;
-    transition: all 0.5s;
-    background: linear-gradient(to top,rgb(124, 123, 123), rgb(153, 152, 152));
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transition:1s
+}
+
+nav ul li:hover::after {
+    transform:  rotate3d(1, 1, 1, 0deg);
+    transition:  1s;
+    opacity: 1;
 }
 .selected{
         text-decoration: overline;
@@ -222,11 +280,34 @@ nav ul li a:hover{
     width: 250px;
     position: relative;
     border-radius: 10px;
-    border: 4px inset #cdcaf3;
     transition: 0.5s, transform 1.5s, box-shadow 1.4s;
     animation:opaciti 1s,apear 1s 1s;
     margin:10px;
+    box-shadow: black 6px 9px 6px 1px;
+    position: relative;
 }
+
+.box .item::after{
+    content: '';
+    background: white;
+    width: 5px;
+    border-radius: 10px;
+    height: 96%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    margin: auto;
+    transform: scaleY(0);
+    transition: 1s;
+}
+
+.box .item:hover::after{
+    transform: scaleY(1);
+    transition:1s;
+}
+
+
 
 .box .item .titlebox{
     position: absolute;
@@ -300,11 +381,8 @@ nav ul li a:hover{
 }
 
 .box .item:hover{
-    border: 4px inset #4b43dd;
     transition:  0.7s;
     cursor: pointer;
-    transform: translateY(-10px);
-    box-shadow: black 0px 13px 8px;
 }
 
 .box .item:hover #logo{
@@ -498,16 +576,18 @@ nav ul li a:hover{
 }
 
 .learn .learn_social div p{
-    display: none;
+    display: none; 
     position: absolute;
     background: black;
     color: white;
     opacity: 0; 
-    width: 100%;
-    margin: 0;
+    width: max-content;
     top: 100px;
-    padding: 5px 0px 5px 0px;
+    left: 0;
+    padding: 5px 5px 5px 5px;
     border-radius: 10px;
+    right: 0;
+    margin: auto;
 }
 
 .learn .learn_social div:hover p{
@@ -707,6 +787,13 @@ nav ul li a:hover{
         text-decoration: underline;
         transition: all 0.5s;
         background: transparent;
+    }
+
+    nav ul li::after{
+        display: none;
+    }
+    nav ul li a::after{
+        display: none;
     }
 
     .selected{
